@@ -2,7 +2,7 @@
 export interface ITable {
     title: string;
     columns: string[];
-    dataSource: unknown;
+    dataSource: any;
 }
 
 
