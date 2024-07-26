@@ -4,6 +4,7 @@ export const Table = ({
   title = 'default table name',
   columns,
   dataSource,
+  onAction,
 }: ITable) => {
   return (
     <div className="mt-4">
@@ -30,6 +31,12 @@ export const Table = ({
                   {row[col]}
                 </td>
               ))}
+              <td className="border border-gray-300 px-4 py-2 text-left">
+                <a onClick={() => onAction('edit', row)}>Edit</a>
+              </td>
+              <td className="border border-gray-300 px-4 py-2 text-left">
+                <a onClick={() => onAction('delete', row)}>Delete</a>
+              </td>
             </tr>
           ))}
         </tbody>
